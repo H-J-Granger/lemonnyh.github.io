@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="keywords" content="OsmiumOJ,Osmium OJ,Osmium Online Judge,OOJ,OsmiumOnlinejudge"/>
+		<meta name="description" content="OsmiumOJ，一个开源的算法竞赛在线评测平台"/>
+		<title>首页 - OOJ</title>
+		<link rel="stylesheet" href="/static/css/main.css"/>
+		<link rel="stylesheet" href="/static/css/shadow.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/editor.md/css/editormd.min.css"/>
+		<link rel="shortcut icon" type="image/x-icon" href="/static/icon/ooj.png"/>
+		<style>/* Something */</style>
+        <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mustache/mustache.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/editor.md/editormd.min.js"></script>
+		<script src="/static/js/alert1.js"></script>
+		<script src="/static/js/main.js"></script>
+		<script>
+			$(function() {
+				var xhr = new XMLHttpRequest();
+				xhr.open('get', 'https://v1.hitokoto.cn?c=a&c=b&c=c&c=d');
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState === 4) {
+						var data = JSON.parse(xhr.responseText);
+						$("#hitokoto-hitokoto").text(data.hitokoto);
+						$("#hitokoto-from").text('——' + data.from);
+					}
+				}
+				xhr.send();
+			});
+		</script>
+	</head>
+	<body></body>
+</html>
