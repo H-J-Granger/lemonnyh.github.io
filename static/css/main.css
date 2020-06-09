@@ -39,13 +39,12 @@ a {
 	width: 100vw;
 	border-bottom-right-radius: calc(52px + 15%);
 	border-bottom-left-radius: calc(52px + 15%);
-	padding-left: calc(15% + 8px);
-	padding-right: calc(15% + 8px);
-	line-height: 36px
+	padding: 0 calc(15% + 8px) 0 calc(15% + 8px);
+	line-height: 52px
 }
 #OJ-name {
 	font-size: 26px;
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	color: var(--color-1);
-	user-select: none;
+	user-select: none !important
 }
