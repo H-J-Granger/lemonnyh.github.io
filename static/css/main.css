@@ -1,11 +1,10 @@
 :root {
-	--color-0: #ff22cc;
-	--color-1: #ff78cc;
-	--color-2: #8833ff
+	--color-0: rgba(255, 34, 204, 0.8);
+	--color-1: rgba(255, 120, 204, 0.8);
+	--color-2: rgba(136, 51, 255, 0.8)
 }
 * {
 	box-sizing: border-box;
-	color: #111414;
 	word-wrap: break-word;
 	vertical-align: middle
 }
@@ -13,12 +12,40 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-size: 0.8em;
-	background: #fafafa
+	background: #eeeeee
 }
 a {
 	text-decoration: none
 }
+.fill {
+	padding: 8px
+}
+.fill.fill-1 {
+	background: rgba(255, 255, 255, 0.8)
+}
+.fill.fill-2 {
+	background: rgba(175, 175, 175, 0.8)
+}
+.fill.fill-3 {
+	background: var(--color-1)
+}
 .header {
-	position: fixed;
-	z-index: 32767
+	position: fixed
+}
+.header#header-line {
+	z-index: 32767;
+	margin: 0 auto;
+	height: 52px;
+	width: 100vw;
+	border-bottom-right-radius: calc(52px + 15%);
+	border-bottom-left-radius: calc(52px + 15%);
+	padding-left: calc(15% + 8px);
+	padding-right: calc(15% + 8px);
+	line-height: 36px
+}
+#OJ-name {
+	font-size: 26px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: var(--color-1);
+	user-select: none;
 }
