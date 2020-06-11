@@ -135,3 +135,11 @@ div[data-area-name="user-info"] {
     margin-inline-start: 0.3em;
     margin-inline-end: 0.3em
 }
+
+.gradient-text {
+    background: linear-gradient(to bottom right, var(--color-0), var(--color-2)) !important;
+    color: transparent !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -moz-background-clip: text !important
+}
