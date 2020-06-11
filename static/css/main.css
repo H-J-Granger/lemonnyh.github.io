@@ -1,7 +1,10 @@
 :root {
     --color-0: rgba(255, 34, 204, 0.8);
     --color-1: rgba(255, 120, 204, 0.8);
-    --color-2: rgba(136, 51, 255, 0.8)
+    --color-2: rgba(136, 51, 255, 0.8);
+    --darkness-0: rgba(255, 255, 255, 0.8);
+    --darkness-1: rgba(233, 233, 233, 0.8);
+    --darkness-2: rgba(175, 175, 175, 0.8)
 }
 
 * {
@@ -23,15 +26,16 @@ a {
 }
 
 .fill {
-    padding: 8px
+    padding: 8px;
+    border-radius: 8px
 }
 
 .fill.fill-1 {
-    background: rgba(255, 255, 255, 0.8)
+    background: var(--darkness-0)
 }
 
 .fill.fill-2 {
-    background: rgba(175, 175, 175, 0.8)
+    background: var(--darkness-2)
 }
 
 .fill.fill-3 {
@@ -47,8 +51,10 @@ a {
     margin: 0 auto;
     height: 52px;
     width: 100vw;
-    border-bottom-right-radius: calc(52px + 15%);
-    border-bottom-left-radius: calc(52px + 15%);
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-right-radius: calc(52px + 15%) !important;
+    border-bottom-left-radius: calc(52px + 15%) !important;
     padding: 0 calc(15% + 8px) 0 calc(15% + 8px);
     line-height: 52px
 }
@@ -80,7 +86,7 @@ a {
 }
 
 .OJ-nav-item:hover {
-    background: rgba(233, 233, 233, 0.8)
+    background: var(--darkness-1)
 }
 
 .OJ-nav-item-text {
@@ -96,10 +102,12 @@ a {
 }
 
 #main-body {
+    position: absolute;
     display: grid;
-    width: 1080px;
-    margin: 60px 0 0 0;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: repeat(3, 350px);
-    grid-template-areas: 'new-contests notices notices' 'new-contests b b' 'c c c'
+    width: 960px;
+    margin: 60px 0 0 calc(50% - 476px);
+    grid-template-columns: repeat(3, calc(33.3% - 8px));
+    grid-template-rows: repeat(2, 330px);
+    grid-template-areas: 'new-contests new-contests clock-in' 'notices notices info';
+    gap: 8px
 }
