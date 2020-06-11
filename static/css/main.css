@@ -62,9 +62,9 @@ a {
 #OJ-name {
     display: inline-block;
     font-size: 26px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--color-1);
-    user-select: none !important
+    user-select: none !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 #OJ-top-nav {
